@@ -1,0 +1,56 @@
+.hero-sub{
+  height: 520px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 80px;
+  color: white;
+  overflow: hidden;
+}
+
+/* overlay */
+.hero-sub::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.35)
+  );
+}
+
+.hero-content{
+  position: relative;
+  z-index: 2;          /* supaya teks di atas overlay */
+  max-width: 650px;
+}
+
+.hero-content h1{
+  font-size: 52px;
+  margin: 20px 0;
+}
+
+.hero-content p{
+  line-height: 1.6;
+}
+
+.breadcrumb{
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* background per halaman */
+.hero-works{
+  background-image: url("/assets/LPG.jpg");
+}
+
+/* background per halaman */
+.hero-about{
+  background-image: url("/assets/bg2.jpg");
+}
