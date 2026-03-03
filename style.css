@@ -160,7 +160,7 @@ body {
   /* HERO */
   .hero {
     height: 100vh;
-    background: url('/assets/bg.png') center/cover no-repeat;
+    background: url('assets/bg.png') center/cover no-repeat;
     position: relative;
     display: flex;
     align-items: center;
@@ -1014,4 +1014,5 @@ body {
   opacity: 0.8;
 
 }
+
 
