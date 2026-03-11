@@ -47,15 +47,16 @@
 
 /* background per halaman */
 .hero-works{
-  background-image: url("/assets/LPG.jpg");
+  background-image: url("../assets/LPG.jpg");
 }
 
 /* background per halaman */
 .hero-about{
-  background-image: url("/assets/hero-about.png");
+  background-image: url("../assets/hero-about.png");
 }
 
 /* background per halaman */
 .hero-artikel{
-  background-image: url("/assets/test.jpg");
+  background-image: url("../assets/test.jpg");
+
 }
