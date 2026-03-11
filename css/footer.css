@@ -1,0 +1,46 @@
+
+.footer {
+  background: #027dca;
+  color: white;
+  padding-top: 80px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr; /* ← tambahkan 1 kolom */
+  gap: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-logo {
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.footer-col h4 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.footer-col p,
+.footer-col a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer-col a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.2);
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+  opacity: 0.8;
+}

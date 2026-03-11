@@ -1,0 +1,114 @@
+
+/* NAVBAR */
+.navbar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 60px;
+  background: transparent;
+  z-index: 100;
+}
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.nav-container {
+  background: transparent;
+  border-radius: 50px;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn-primary {
+  background: white;
+  color: #027dca;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #027dca;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/* NAVBAR SAAT SCROLL */
+.navbar.scrolled .nav-container {
+  background: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.navbar.scrolled .menu a {
+  color: #027dca;
+}
+
+.navbar.scrolled .btn-primary {
+  background: #027dca;
+  color: white;
+}
+
+.image-modal{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.image-box img{
+  max-width: 80vw;
+  max-height: 80vh;
+}
+
+.close-btn{
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-btn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.prev-btn{
+  left: 40px;
+}
+
+.next-btn{
+  right: 40px;
+}
