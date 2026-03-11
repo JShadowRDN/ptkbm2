@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>About Us | PT. Karya Bakti Metalasri (KBM)</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div include-html="components/navbar.html"></div>
+
+  <!-- HERO -->
+  <div include-html="components/hero-about.html"></div>
+
+  <!-- ================= ABOUT SECTION ================= -->
+  <section class="about-section">
+    <div class="container">
+
+      <!-- WHO WE ARE -->
+      <div class="about-block">
+        <h2>PT. Karya Bakti Metalasri (KBM) at a Glance</h2>
+        <p>
+          <strong>PT Karya Bakti Metalasri (KBM)</strong> didirikan tahun 1994 dan hingga saat ini masih dalam bisnis utama pabrikasi kemasan untuk berbagai keperluan industri di sektor minyak dan gas bumi untuk pasar domestik dan ekspor melalui mitra usaha kami
+        </p>
+        <br>
+        <p>
+          Produk utama kami adalah drum kemasan volume 209 liter berbahan baku plat baja CRC (Cold Rolled Coil), kualitas produk kami memiliki berbagai macam sertifikasi sesuai dengan permintaan konsumen. Berlokasi di Surabaya Industrial Estate Rungkut (SIER), mitra kami adalah badan usaha swasta dan pemerintah.
+        </p>
+        <br>
+        <p>
+          Pada tahun 2010 KBM mendapatkan Ijin Prinsip (IP) dari PT. Pertamina untuk memulai usaha Bengkel Perbaikan Tabung (BPT) LPG 3kg berlokasi di Kertosono - Jawa Timur.
+        </p>
+        <br>
+        <p>
+          PT. Karya Bakti Metalasri memiliki komitmen untuk selalu berusaha memberikan produk dan layanan terbaik bagi semua mitra usaha kami, terbukti dengan berbagai penghargaan yang telah kami peroleh.
+        </p>
+          <!-- GAMBAR -->
+  <div class="about-image">
+    <img src="assets/aboutus2.png" alt="PT KBM Factory">
+  </div>
+      </div>
+      <div class="section-divider"></div>
+    </section>
+
+
+<!-- JOURNEY FULL WIDTH -->
+<!-- TITLE DI LUAR BACKGROUND -->
+<section class="journey-title-section">
+  <div class="container">
+    <h2 class="journey-title">OUR JOURNEY</h2>
+  </div>
+</section>
+
+
+<!-- JOURNEY BACKGROUND -->
+<section class="journey-section-bg">
+
+  <div class="journey-overlay container">
+
+    <!-- TIMELINE YEARS -->
+    <div class="journey-years">
+
+      <button class="year active" data-target="j1994">1994</button>
+      <button class="year" data-target="j2005">2005</button>
+      <button class="year" data-target="j2015">2015</button>
+      <button class="year" data-target="j2023">2023+</button>
+
+    </div>
+
+
+    <!-- CONTENT -->
+    <div class="journey-content">
+
+      <div class="journey-item active" id="j1994">
+        <h3>Company Established</h3>
+        <p>PT KBM started as a steel drum manufacturer serving industrial clients.</p>
+      </div>
+
+      <div class="journey-item" id="j2005">
+        <h3>Telecommunication Expansion</h3>
+        <p>Expanded business into telecommunication industry as SACME Contractor.</p>
+      </div>
+
+      <div class="journey-item" id="j2015">
+        <h3>Engineering Strength</h3>
+        <p>Strengthened engineering division to support industrial development.</p>
+      </div>
+
+      <div class="journey-item" id="j2023">
+        <h3>Sustainable Focus</h3>
+        <p>Focus on sustainable and energy saving industrial solutions.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="vision-mission-section">
+
+  <div class="container">
+
+    <div class="vision-box">
+      <h2>OUR VISION</h2>
+      <p>
+        Menjadi perusahaan manufaktur dan engineering terdepan yang memberikan
+        solusi industri inovatif, efisien, dan berkelanjutan.
+      </p>
+    </div>
+
+    <div class="mission-box">
+      <h2>OUR MISSION</h2>
+      <ul>
+        <li>Memberikan kualitas produk dan layanan terbaik</li>
+        <li>Menjaga standar keselamatan dan profesionalisme tinggi</li>
+        <li>Membangun hubungan jangka panjang dengan klien</li>
+        <li>Mengembangkan solusi energi yang ramah lingkungan</li>
+      </ul>
+    </div>
+
+  </div>
+
+</section>
+
+
+  <!-- FOOTER -->
+  <div include-html="components/footer.html"></div>
+
+  <!-- INCLUDE SCRIPT -->
+  <script src="js/include.js"></script>
+
+
+<script>
+const items = document.querySelectorAll('.carousel-item');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+const dotsContainer = document.querySelector('.carousel-dots');
+
+let current = 2;
+
+/* CREATE DOTS */
+items.forEach((_, index) => {
+  const dot = document.createElement('span');
+  dot.addEventListener('click', () => {
+    current = index;
+    updateCarousel();
+  });
+  dotsContainer.appendChild(dot);
+});
+
+const dots = document.querySelectorAll('.carousel-dots span');
+
+function updateCarousel() {
+  items.forEach(item => {
+    item.classList.remove('active', 'prev-item', 'next-item');
+  });
+
+  dots.forEach(dot => dot.classList.remove('active-dot'));
+
+  items[current].classList.add('active');
+  dots[current].classList.add('active-dot');
+
+  if (current > 0) {
+    items[current - 1].classList.add('prev-item');
+  }
+
+  if (current < items.length - 1) {
+    items[current + 1].classList.add('next-item');
+  }
+}
+
+nextBtn.addEventListener('click', () => {
+  if (current < items.length - 1) {
+    current++;
+    updateCarousel();
+  }
+});
+
+prevBtn.addEventListener('click', () => {
+  if (current > 0) {
+    current--;
+    updateCarousel();
+  }
+});
+
+updateCarousel();
+</script>
+
+<script>
+
+const years = document.querySelectorAll(".year");
+const journeyItems = document.querySelectorAll(".journey-item");
+
+let currentIndex = 0;
+
+function showJourney(index){
+
+  journeyItems.forEach(item=>{
+    item.classList.remove("active");
+  });
+
+  years.forEach(year=>{
+    year.classList.remove("active");
+  });
+
+  years[index].classList.add("active");
+
+  const target = document.getElementById(years[index].dataset.target);
+
+  setTimeout(()=>{
+    target.classList.add("active");
+  },100);
+
+}
+
+years.forEach((year,i)=>{
+  year.addEventListener("click",()=>{
+    currentIndex = i;
+    showJourney(currentIndex);
+  });
+});
+
+setInterval(()=>{
+  currentIndex++;
+
+  if(currentIndex >= years.length){
+    currentIndex = 0;
+  }
+
+  showJourney(currentIndex);
+
+},4000);
+
+</script>
+
+</body>
+</html>
